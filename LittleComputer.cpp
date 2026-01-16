@@ -8,7 +8,18 @@ public:
      * 
      */
     LittleComputer();
-    LittleComputer
+    LittleComputer(vector<int> instructions){
+
+    }
+    int getProgramCounter(){}
+    int getMemoryAt(int location){}
+    int getCurrentInstruction(){
+      
+    }
+    void step(){}
+    bool isHalted(){}
+    void restart(){}
+
     /**
      * @brief Get the Program Counter
      * 
