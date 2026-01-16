@@ -18,7 +18,9 @@ public:
     };
 
     
-    int getMemoryAt(int location){}
+    int getMemoryAt(int location){
+      return m_memory.at(location);
+    }
     int getCurrentInstruction(){
 
     }
