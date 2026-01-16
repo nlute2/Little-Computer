@@ -8,7 +8,7 @@ public:
      * 
      */
     LittleComputer();
-
+    LittleComputer
     /**
      * @brief Get the Program Counter
      * 
@@ -24,7 +24,7 @@ public:
     int getAccumulator();
     
     // Add other public member functions / constructors here
-    
+
 private:
   vector<int> memory = {};
   int accumulator = 0;
