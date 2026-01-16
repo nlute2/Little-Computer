@@ -12,11 +12,11 @@ CXXFLAGS += -std=c++20 -fmodules-ts -pedantic -pedantic-errors
 CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -Wuninitialized
 
 # list .h files here
-HEADERS =
+HEADERS = LittleComputer.h
 
 # list .cpp files here
 TEST_FILES = tests.cpp
-SHARED_FILES = 
+SHARED_FILES = LittleComputer.cpp
 
 .PHONY: all
 all: tests.exe
