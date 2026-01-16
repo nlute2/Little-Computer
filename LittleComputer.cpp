@@ -42,7 +42,7 @@ public:
     // Add other public member functions / constructors here
 
 private:
-  vector<int> m_memory(100,0);
+  vector<int> m_memory(100, 0);
   int m_accumulator = 0;
   int m_programCounter = 0;
     // Add member variables here
