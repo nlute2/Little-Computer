@@ -10,7 +10,7 @@ public:
     LittleComputer(){
       int ACC = m_accumulator;
       int PC = m_programCounter;
-      m_memory(100,0);
+      
     };
     LittleComputer(vector<int> instructions);
 
@@ -42,7 +42,7 @@ public:
     // Add other public member functions / constructors here
 
 private:
-  vector<int> m_memory = {};
+  vector<int> m_memory(100,0);
   int m_accumulator = 0;
   int m_programCounter = 0;
     // Add member variables here
