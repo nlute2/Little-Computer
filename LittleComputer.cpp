@@ -32,7 +32,7 @@ public:
      * @return int Current accumulator value
      */
     int getAccumulator(){
-      
+      int accu = accumulator
     }
     
     // Add other public member functions / constructors here
