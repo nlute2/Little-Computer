@@ -13,7 +13,9 @@ public:
       int PC = m_programCounter;
       
     };
-    LittleComputer(vector<int> instructions);
+    LittleComputer(vector<int> instructions){
+      m_memory = instructions;
+    };
 
     
     int getMemoryAt(int location){}
