@@ -9,9 +9,8 @@ public:
      */
     LittleComputer();
     LittleComputer(vector<int> instructions){
-      
-    }
-    int getProgramCounter(){}
+
+    
     int getMemoryAt(int location){}
     int getCurrentInstruction(){
 
@@ -32,7 +31,9 @@ public:
      * 
      * @return int Current accumulator value
      */
-    int getAccumulator();
+    int getAccumulator(){
+      
+    }
     
     // Add other public member functions / constructors here
 
