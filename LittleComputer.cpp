@@ -24,7 +24,7 @@ public:
      * 
      * @return int Current program counter
      */
-    int getProgramCounter();
+    int getProgramCounter(){return m_programCounter;}
 
     /**
      * @brief Get the Accumulator value
