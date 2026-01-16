@@ -26,6 +26,8 @@ public:
     // Add other public member functions / constructors here
 
 private:
+  vector<int> memory = {};
+  int accumulator = {};
     // Add member variables here
 };
 
