@@ -8,7 +8,7 @@ public:
      * 
      */
     LittleComputer();
-    LittleComputer(vector<int> instructions){
+    LittleComputer(vector<int> instructions);
 
     
     int getMemoryAt(int location){}
@@ -32,7 +32,6 @@ public:
      * @return int Current accumulator value
      */
     int getAccumulator(){
-      
       return m_accumulator;
     }
     
