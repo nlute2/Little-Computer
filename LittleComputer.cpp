@@ -27,7 +27,8 @@ public:
 
 private:
   vector<int> memory = {};
-  int accumulator = {};
+  int accumulator = 0;
+  int programCounter = 0;
     // Add member variables here
 };
 
