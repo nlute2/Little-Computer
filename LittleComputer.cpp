@@ -7,7 +7,9 @@ public:
      * @brief Construct a new Little Computer object with an empty program
      * 
      */
-    LittleComputer();
+    LittleComputer(){
+      m_accumulator;
+    };
     LittleComputer(vector<int> instructions);
 
     
