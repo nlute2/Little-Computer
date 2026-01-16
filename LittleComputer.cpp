@@ -10,7 +10,7 @@ public:
     LittleComputer(){
       int ACC = m_accumulator;
       int PC = m_programCounter;
-      m_memory = {100,0};
+      m_memory(100,0);
     };
     LittleComputer(vector<int> instructions);
 
