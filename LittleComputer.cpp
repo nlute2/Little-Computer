@@ -8,7 +8,9 @@ public:
      * 
      */
     LittleComputer(){
-      m_accumulator;
+      int ACC = m_accumulator;
+      int PC = m_programCounter;
+      
     };
     LittleComputer(vector<int> instructions);
 
