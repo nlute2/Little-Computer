@@ -32,7 +32,7 @@ public:
      * @return int Current accumulator value
      */
     int getAccumulator(){
-      int accu = accumulator;
+      int accu = m_accumulator;
       return accu;
     }
     
@@ -40,8 +40,8 @@ public:
 
 private:
   vector<int> memory = {};
-  int accumulator = 0;
-  int programCounter = 0;
+  int m_accumulator = 0;
+  int m_programCounter = 0;
     // Add member variables here
 };
 
