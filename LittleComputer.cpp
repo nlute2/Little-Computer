@@ -25,7 +25,9 @@ public:
       return m_memory.at(m_programCounter);
     }
     void step(){}
-    bool isHalted(){}
+    bool isHalted(){
+      
+    }
     void restart(){}
 
     /**
