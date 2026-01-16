@@ -22,7 +22,7 @@ public:
       return m_memory.at(location);
     }
     int getCurrentInstruction(){
-
+      return 
     }
     void step(){}
     bool isHalted(){}
