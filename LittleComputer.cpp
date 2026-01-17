@@ -22,7 +22,15 @@ using namespace std;
 
           case 300:
 
-          case 
+          case 400:
+          
+          case 500:
+
+          case 600:
+
+          case 700:
+
+          case 800: 
 
 
 
