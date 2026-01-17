@@ -4,20 +4,20 @@ using namespace std;
 
 
  
-    LittleComputer:LittleComputer(){
+    LittleComputer::LittleComputer(){
       int ACC = m_accumulator;
       int PC = m_programCounter;
       
     };
-    LittleComputer(vector<int> instructions){
+    LittleComputer::LittleComputer(vector<int> instructions){
       m_memory = instructions;
     };
 
     
-    int getMemoryAt(int location){
+    int LittleComputer::getMemoryAt(int location){
       return m_memory.at(location);
     }
-    int getCurrentInstruction(){
+    LittleComputer::getCurrentInstruction(){
       return m_memory.at(m_programCounter);
     }
     void step(){
