@@ -10,6 +10,7 @@ using namespace std;
       m_memory = instructions;
       if(!isHalted()){
         
+        
     
         
 
