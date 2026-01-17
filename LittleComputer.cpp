@@ -28,7 +28,7 @@ public:
       LittleComputer();
     }
     bool isHalted(){
-      
+      return true;
     }
     void restart(){}
 
