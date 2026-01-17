@@ -35,12 +35,16 @@ public:
      */
     void step();
     /**
-     * @brief 
+     * @brief checks the programs status
      * 
      * @return true 
      * @return false 
      */
     bool isHalted();
+    /**
+     * @brief rests the LittleComputer
+     * 
+     */
     void restart();
 
     /**
