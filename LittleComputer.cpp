@@ -25,7 +25,7 @@ public:
       return m_memory.at(m_programCounter);
     }
     void step(){
-      LittleComputer
+      LittleComputer()
     }
     bool isHalted(){
       
