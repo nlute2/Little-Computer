@@ -20,11 +20,26 @@ public:
      * @brief Get the Memory At object
      * 
      * @param location 
-     * @return memory value at g 
+     * @return memory value at given location 
      */
     int getMemoryAt(int location);
+    /**
+     * @brief Get the Current Instruction value
+     * 
+     * @return int 
+     */
     int getCurrentInstruction();
+    /**
+     * @brief move the program forward
+     * 
+     */
     void step();
+    /**
+     * @brief 
+     * 
+     * @return true 
+     * @return false 
+     */
     bool isHalted();
     void restart();
 
