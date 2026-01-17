@@ -1,5 +1,6 @@
 #include "LittleComputer.h"
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
