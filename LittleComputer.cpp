@@ -9,8 +9,8 @@ using namespace std;
     LittleComputer::LittleComputer(vector<int> instructions){
       m_memory = instructions;
       if(!isHalted()){
-        
-        
+        for ()
+
     
         
 
