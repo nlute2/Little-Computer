@@ -38,6 +38,7 @@ using namespace std;
 
       incrementCounter();
       }
+      else{cout << "Error: isHalted"<< endl;};
     };
 
     
