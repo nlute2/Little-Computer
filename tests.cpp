@@ -15,9 +15,12 @@ using doctest::Approx;
 //-----------------------------------------------------------------------------------
 
 #include <string>
+#include <vector>
 #include "LittleComputer.h"
 
 using namespace std;
+
+
 
 TEST_CASE("default constructor - memory not tested")
 {
