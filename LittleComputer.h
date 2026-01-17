@@ -59,6 +59,7 @@ public:
      * @return int Current program counter
      */
     int getProgramCounter();
+    int incrementCounter();
 
     /**
      * @brief Get the Accumulator value
