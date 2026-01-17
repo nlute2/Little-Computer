@@ -22,7 +22,9 @@ using namespace std;
     int LittleComputer::getMemoryAt(int location){
       return m_memory.at(location);
     }
-    int 
+    void LittleComputer::incrementCounter(){
+      
+    }
     int LittleComputer::getCurrentInstruction(){
       return m_memory.at(m_programCounter);
     }
