@@ -1,6 +1,6 @@
 #ifndef LITTLECOMPUTER_H
 #define LITTLECOMPUTER_H
-
+using namespacce std;
 #include <vector>
 
 /**
