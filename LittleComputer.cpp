@@ -10,9 +10,7 @@ using namespace std;
       m_memory = instructions;
       if(!isHalted()){
         
-        for (vector<int> m_memory){
-
-        }
+    
         
 
 
