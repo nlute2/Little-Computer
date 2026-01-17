@@ -14,6 +14,14 @@ public:
      * 
      */
     LittleComputer();
+    LittleComputer(vector<int> instructions);
+
+    
+    int getMemoryAt(int location);
+    int getCurrentInstruction();
+    void step();
+    bool isHalted();
+    void restart();
 
     /**
      * @brief Get the Program Counter
@@ -32,7 +40,9 @@ public:
     // Add other public member functions / constructors here
 
 private:
+  vector<int> m_memory{100, 0};
+  int m_accumulator = 0;
+  int m_programCounter;
     // Add member variables here
 };
-
 #endif // LITTLECOMPUTER_H
