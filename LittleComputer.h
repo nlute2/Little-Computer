@@ -14,6 +14,12 @@ public:
      * 
      */
     LittleComputer();
+
+    /**
+     * @brief Construct a new Little Computer object with given instructions
+     * 
+     * @param instructions 
+     */
     LittleComputer(vector<int> instructions);
 
     /**
