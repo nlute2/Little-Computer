@@ -5,9 +5,7 @@ using namespace std;
 
  
     LittleComputer::LittleComputer(){
-      int ACC = m_accumulator;
-      int PC = m_programCounter;
-      
+    
     };
     LittleComputer::LittleComputer(vector<int> instructions){
       m_memory = instructions;
