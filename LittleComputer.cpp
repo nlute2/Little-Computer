@@ -9,12 +9,12 @@ using namespace std;
     LittleComputer::LittleComputer(vector<int> instructions){
       m_memory = instructions;
       if(!isHalted()){
-        for (
+        
 
     
         
 
-      inc
+      incrementCounter();
       }
     };
 
@@ -23,7 +23,7 @@ using namespace std;
       return m_memory.at(location);
     }
     void LittleComputer::incrementCounter(){
-      
+      m_programCounter += 1; 
     }
     int LittleComputer::getCurrentInstruction(){
       return m_memory.at(m_programCounter);
