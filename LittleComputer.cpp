@@ -2,13 +2,9 @@
 #include <vector>
 using namespace std;
 
-class LittleComputer {
-public:
-    /**
-     * @brief Construct a new Little Computer object with an empty program
-     * 
-     */
-    LittleComputer(){
+
+ 
+    LittleComputer:LittleComputer(){
       int ACC = m_accumulator;
       int PC = m_programCounter;
       
