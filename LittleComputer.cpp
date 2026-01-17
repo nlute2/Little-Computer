@@ -24,7 +24,9 @@ public:
     int getCurrentInstruction(){
       return m_memory.at(m_programCounter);
     }
-    void step(){}
+    void step(){
+      LittleComputer
+    }
     bool isHalted(){
       
     }
