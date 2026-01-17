@@ -16,7 +16,12 @@ public:
     LittleComputer();
     LittleComputer(vector<int> instructions);
 
-    
+    /**
+     * @brief Get the Memory At object
+     * 
+     * @param location 
+     * @return memory value at g 
+     */
     int getMemoryAt(int location);
     int getCurrentInstruction();
     void step();
