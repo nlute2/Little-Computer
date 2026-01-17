@@ -16,6 +16,8 @@ using namespace std;
           case 000: 
           cout << "bingbong";
 
+          case
+
 
 
         }
