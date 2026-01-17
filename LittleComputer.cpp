@@ -17,39 +17,34 @@ using namespace std;
     int LittleComputer::getMemoryAt(int location){
       return m_memory.at(location);
     }
-    LittleComputer::getCurrentInstruction(){
+    int LittleComputer::getCurrentInstruction(){
       return m_memory.at(m_programCounter);
     }
-    void step(){
+    void LittleComputer::step(){
       LittleComputer();
     }
-    bool isHalted(){
+    bool LittleComputer::isHalted(){
       return true;
     }
-    void restart(){}
+    void LittleComputer::restart(){}
 
     /**
      * @brief Get the Program Counter
      * 
      * @return int Current program counter
      */
-    int getProgramCounter(){return m_programCounter;}
+    int LittleComputer::getProgramCounter(){return m_programCounter;}
 
     /**
      * @brief Get the Accumulator value
      * 
      * @return int Current accumulator value
      */
-    int getAccumulator(){
+    int LittleComputer::getAccumulator(){
       return m_accumulator;
     }
     
     // Add other public member functions / constructors here
 
-private:
-  vector<int> m_memory{100, 0};
-  int m_accumulator = 0;
-  int m_programCounter = 0;
-    // Add member variables here
-};
+
 
