@@ -16,7 +16,13 @@ using namespace std;
           case 000: 
           cout << "bingbong";
 
-          case
+          case 100:
+
+          case 200:
+
+          case 300:
+
+          case 
 
 
 
