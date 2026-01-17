@@ -3,7 +3,8 @@
 using namespace std;
 
     LittleComputer::LittleComputer(){
-    
+    m_accumulator = 0;
+    m_programCounter = 0;
     };
     LittleComputer::LittleComputer(vector<int> instructions){
       m_memory = instructions;
