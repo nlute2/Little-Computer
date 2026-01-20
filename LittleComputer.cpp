@@ -55,7 +55,7 @@ using namespace std;
       LittleComputer();
     }
     bool LittleComputer::isHalted(){
-    
+      if ()
       return false;
     }
     void LittleComputer::restart(){}
