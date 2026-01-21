@@ -30,7 +30,9 @@ using namespace std;
           case 6:
           m_programCounter = getMemoryAt(instruction % 100);
           case 7:
-          if ()
+          if (m_accumulator == 0){
+            m_programCounter = getMemoryAt(instruction)
+          }
 
           case 8: 
           
