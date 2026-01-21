@@ -41,25 +41,25 @@ using namespace std;
 //         CHECK(c1.getMemoryAt(i) == program.at(i));
 // }
 
-TEST_CASE("getCurrentInstruction start")
-{
-    // Program does not have to do anything meaningful for this test
-    vector<int> program = {504, 104, 902, 0, 10};
-
-    LittleComputer c1(program);
-    CHECK(c1.getCurrentInstruction() == 504);
-}
-
-// TEST_CASE("step advances to next instruction")
+// TEST_CASE("getCurrentInstruction start")
 // {
 //     // Program does not have to do anything meaningful for this test
-//     vector<int> program = {502, 102, 5};
+//     vector<int> program = {504, 104, 902, 0, 10};
 
 //     LittleComputer c1(program);
-//     c1.step();
-//     CHECK(c1.getProgramCounter() == 1);
-//     CHECK(c1.getCurrentInstruction() == 102);
+//     CHECK(c1.getCurrentInstruction() == 504);
 // }
+
+TEST_CASE("step advances to next instruction")
+{
+    // Program does not have to do anything meaningful for this test
+    vector<int> program = {502, 102, 5};
+
+    LittleComputer c1(program);
+    c1.step();
+    CHECK(c1.getProgramCounter() == 1);
+    CHECK(c1.getCurrentInstruction() == 102);
+}
 
 // TEST_CASE("isHalted and step does not advance halted program")
 // {
