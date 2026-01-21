@@ -57,7 +57,7 @@ void LittleComputer::step()
       break;
     case 6:
       m_programCounter = getMemoryAt(instruction % 100);
-
+      cout << m_programCounter;
       break;
     case 7:
       if (m_accumulator == 0) {
