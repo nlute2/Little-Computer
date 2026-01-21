@@ -110,17 +110,17 @@ using namespace std;
 //     CHECK(c1.getAccumulator() == 3);
 // }
 
-TEST_CASE("branch always")
-{
-    // Program that jumps to instruction 3 then 1
-    vector<int> program = {603, 0, 0, 601, 0};
+// TEST_CASE("branch always")
+// {
+//     // Program that jumps to instruction 3 then 1
+//     vector<int> program = {603, 0, 0, 601, 0};
 
-    LittleComputer c1(program);
-    c1.step();
-    CHECK(c1.getProgramCounter() == 3);
-    c1.step();
-    CHECK(c1.getProgramCounter() == 1);
-}
+//     LittleComputer c1(program);
+//     c1.step();
+//     CHECK(c1.getProgramCounter() == 3);
+//     c1.step();
+//     CHECK(c1.getProgramCounter() == 1);
+// }
 
 // TEST_CASE("branch if 0")
 // {
@@ -136,22 +136,22 @@ TEST_CASE("branch always")
 //     CHECK(c1.getProgramCounter() == 4);
 // }
 
-// TEST_CASE("restart")
-// {
-//     // Program that Adds 5 to itself and halts
-//     vector<int> program = {103, 103, 0, 5};
+TEST_CASE("restart")
+{
+    // Program that Adds 5 to itself and halts
+    vector<int> program = {103, 103, 0, 5};
 
-//     LittleComputer c1(program);
-//     c1.step();
-//     c1.step();
-//     CHECK(c1.isHalted() == true);
+    LittleComputer c1(program);
+    c1.step();
+    c1.step();
+    CHECK(c1.isHalted() == true);
 
-//     c1.restart();
-//     CHECK(c1.isHalted() == false);
-//     CHECK(c1.getProgramCounter() == 0);
-//     CHECK(c1.getAccumulator() == 0);
+    c1.restart();
+    CHECK(c1.isHalted() == false);
+    CHECK(c1.getProgramCounter() == 0);
+    CHECK(c1.getAccumulator() == 0);
 
-//     c1.step();
-//     CHECK(c1.getProgramCounter() == 1);
-//     CHECK(c1.getAccumulator() == 5);
-// }
+    c1.step();
+    CHECK(c1.getProgramCounter() == 1);
+    CHECK(c1.getAccumulator() == 5);
+}

@@ -34,6 +34,7 @@ void LittleComputer::step()
 {
   cout << getProgramCounter();
   int instruction = m_memory.at(getProgramCounter());
+  bool skip = false;
   if (!isHalted()) {
     switch (m_memory.at(getProgramCounter()) / 100) {
     case 0:
@@ -56,12 +57,14 @@ void LittleComputer::step()
 
       break;
     case 6:
-      m_programCounter = getMemoryAt(instruction % 100);
+      m_programCounter = instruction % 100;
       cout << m_programCounter;
+      skip = true;
       break;
     case 7:
       if (m_accumulator == 0) {
-        m_programCounter = getMemoryAt(instruction % 100);
+        m_programCounter = instruction % 100;
+        skip = true;
       }
       break;
       // case 8:
@@ -69,7 +72,7 @@ void LittleComputer::step()
       // case 9:
     }
 
-    if (!isHalted()) {
+    if (!isHalted()&&!skip) {
       incrementCounter();
     }
   } else {
