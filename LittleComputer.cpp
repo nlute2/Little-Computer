@@ -9,9 +9,11 @@ using namespace std;
     m_programCounter = 0;
     };
     LittleComputer::LittleComputer(const vector<int>& instructions){
-     
+     m_accumulator = 0;
+      m_programCounter = 0;
+      instructions = 
       if(!isHalted()){
-        switch(m_memory.at(getProgramCounter())){
+        switch(instructions.at(getProgramCounter())){
 
           case 000: 
           cout << "bingbong";
