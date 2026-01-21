@@ -8,7 +8,7 @@ using namespace std;
     m_accumulator = 0;
     m_programCounter = 0;
     };
-    LittleComputer::LittleComputer(vector<int> instructions){
+    LittleComputer::LittleComputer(const vector<int>& instructions){
      
       if(!isHalted()){
         switch(m_memory.at(getProgramCounter())){
