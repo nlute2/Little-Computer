@@ -24,19 +24,19 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
       break;
     case 1:
       m_accumulator = getAccumulator() + getMemoryAt(instruction % 100);
-      increment = true;
+      
       break;
     case 2:
       m_accumulator = getAccumulator() - getMemoryAt(instruction % 100);
-      increment = true;
+      
       break;
     case 3:
       m_memory.at(instruction % 100) = m_accumulator;
-      increment = true;
+     
       break;
     case 5:
       m_accumulator = getMemoryAt(instruction % 100);
-      increment = true;
+      
       break;
     case 6:
       m_programCounter = getMemoryAt(instruction % 100);
@@ -52,13 +52,12 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
       // case 9:
     }
 
-    if(!increment){incrementCounter();
-      cout << getProgramCounter();
+    
   } else {
     cout << "Error: isHalted" << endl;
   };
 };
-}
+
 int LittleComputer::getMemoryAt(int location)
 {
   return m_memory.at(location);
