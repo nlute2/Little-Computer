@@ -46,59 +46,57 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
       if (m_accumulator == 0) {
         m_programCounter = getMemoryAt(instruction % 100);
       }
-      increment = true;
       break;
       // case 8:
 
       // case 9:
     }
 
-    if (increment) {
-      incrementCounter();]
-    } else {
-      cout << "Error: isHalted" << endl;
-    };
+    if(increment){incrementCounter();]
+  } else {
+    cout << "Error: isHalted" << endl;
   };
+};
 
-  int LittleComputer::getMemoryAt(int location)
-  {
-    return m_memory.at(location);
+int LittleComputer::getMemoryAt(int location)
+{
+  return m_memory.at(location);
+}
+void LittleComputer::incrementCounter()
+{
+  m_programCounter += 1;
+}
+int LittleComputer::getCurrentInstruction()
+{
+  cout << getProgramCounter();
+  return m_memory.at(getProgramCounter());
+}
+void LittleComputer::step()
+{
+  LittleComputer();
+}
+bool LittleComputer::isHalted()
+{
+  if (m_memory.at(getProgramCounter()) == 0) {
+    return true;
+  } else {
+    return false;
   }
-  void LittleComputer::incrementCounter()
-  {
-    m_programCounter += 1;
-  }
-  int LittleComputer::getCurrentInstruction()
-  {
-    cout << getProgramCounter();
-    return m_memory.at(getProgramCounter());
-  }
-  void LittleComputer::step()
-  {
-    LittleComputer();
-  }
-  bool LittleComputer::isHalted()
-  {
-    if (m_memory.at(getProgramCounter()) == 0) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  void LittleComputer::restart()
-  {
-    m_programCounter = 0;
-    m_accumulator = 0;
-  }
+}
+void LittleComputer::restart()
+{
+  m_programCounter = 0;
+  m_accumulator = 0;
+}
 
-  int LittleComputer::getProgramCounter()
-  {
-    return m_programCounter;
-  }
+int LittleComputer::getProgramCounter()
+{
+  return m_programCounter;
+}
 
-  int LittleComputer::getAccumulator()
-  {
-    return m_accumulator;
-  }
+int LittleComputer::getAccumulator()
+{
+  return m_accumulator;
+}
 
-  // Add other public member functions / constructors here
+// Add other public member functions / constructors here
