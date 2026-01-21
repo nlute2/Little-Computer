@@ -58,7 +58,7 @@ void LittleComputer::incrementCounter()
 }
 int LittleComputer::getCurrentInstruction()
 {
-  return m_memory.at(m_programCounter);
+  return m_memory.at(getProgramCounter());
 }
 void LittleComputer::step()
 {
