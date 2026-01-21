@@ -14,7 +14,7 @@ using namespace std;
       m_memory = instructions; 
       if(!isHalted()){
         switch(m_memory.at(getProgramCounter())/100){
-          int instruction = m_memory.at(getProgramCounter())
+          int instruction = m_memory.at(getProgramCounter());
 
           case 0: 
           cout << "bingbong";
