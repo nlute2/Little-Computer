@@ -10,7 +10,7 @@ LittleComputer::LittleComputer()
   m_programCounter = 0;
 };
 LittleComputer::LittleComputer(const vector<int>& instructions)
-{ 
+{
   m_accumulator = 0;
   m_programCounter = 0;
   cout << getProgramCounter();
@@ -19,25 +19,29 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
   int instruction = m_memory.at(getProgramCounter());
   if (!isHalted()) {
     switch (m_memory.at(getProgramCounter()) / 100) {
-      
-
     case 0:
       cout << "bingbong";
-
+      break;
     case 1:
       m_accumulator = getAccumulator() + getMemoryAt(instruction % 100);
+      break;
     case 2:
       m_accumulator = getAccumulator() - getMemoryAt(instruction % 100);
+      break;
     case 3:
       m_memory.at(instruction % 100) = m_accumulator;
+      break;
     case 5:
       m_accumulator = getMemoryAt(instruction % 100);
+      break;
     case 6:
       m_programCounter = getMemoryAt(instruction % 100);
+      break;
     case 7:
       if (m_accumulator == 0) {
         m_programCounter = getMemoryAt(instruction % 100);
       }
+      break;
       // case 8:
 
       // case 9:
@@ -58,9 +62,9 @@ void LittleComputer::incrementCounter()
   m_programCounter += 1;
 }
 int LittleComputer::getCurrentInstruction()
-{cout << getProgramCounter();
+{
+  cout << getProgramCounter();
   return m_memory.at(getProgramCounter());
- 
 }
 void LittleComputer::step()
 {
@@ -78,7 +82,6 @@ void LittleComputer::restart()
 {
   m_programCounter = 0;
   m_accumulator = 0;
-
 }
 
 int LittleComputer::getProgramCounter()
