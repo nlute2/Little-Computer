@@ -53,7 +53,7 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
     }
 
     if(increment){incrementCounter();
-      cout 
+      cout << getProgramCounter
   } else {
     cout << "Error: isHalted" << endl;
   };
