@@ -11,8 +11,7 @@ LittleComputer::LittleComputer()
 };
 LittleComputer::LittleComputer(const vector<int>& instructions)
 { 
-  m_accumulator = 0;
-  m_programCounter = 0;
+  
   m_memory = instructions;
   cout << getProgramCounter();
   int instruction = m_memory.at(getProgramCounter());
