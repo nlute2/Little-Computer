@@ -28,7 +28,7 @@ using namespace std;
           case 5:
           m_accumulator = getMemoryAt(instruction % 100);
           case 6:
-          m_programCounter = 
+          m_programCounter = getMemoryAt(instruction % 100);
           case 7:
 
           case 8: 
