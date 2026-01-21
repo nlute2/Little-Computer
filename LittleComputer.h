@@ -20,7 +20,7 @@ public:
      * 
      * @param instructions 
      */
-    LittleComputer(vector<int> instructions);
+    LittleComputer(const vector<int>& instructions);
 
     /**
      * @brief Get the Memory At object
