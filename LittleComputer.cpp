@@ -52,7 +52,7 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
       // case 9:
     }
 
-    if(increment){incrementCounter();]
+    if(increment){incrementCounter();
   } else {
     cout << "Error: isHalted" << endl;
   };
