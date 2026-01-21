@@ -74,9 +74,9 @@ int LittleComputer::getCurrentInstruction()
 }
 void LittleComputer::step()
 {
-  if(!isHalted){
+  if(!isHalted()){
   incrementCounter();}
-  
+
 }
 bool LittleComputer::isHalted()
 {
