@@ -28,71 +28,77 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
       break;
     case 2:
       m_accumulator = getAccumulator() - getMemoryAt(instruction % 100);
+      increment = true;
       break;
     case 3:
       m_memory.at(instruction % 100) = m_accumulator;
+      increment = true;
       break;
     case 5:
       m_accumulator = getMemoryAt(instruction % 100);
+      increment = true;
       break;
     case 6:
       m_programCounter = getMemoryAt(instruction % 100);
+      increment = true;
       break;
     case 7:
       if (m_accumulator == 0) {
         m_programCounter = getMemoryAt(instruction % 100);
       }
+      increment = true;
       break;
       // case 8:
 
       // case 9:
     }
 
-    if(increment){incrementCounter();]
-  } else {
-    cout << "Error: isHalted" << endl;
+    if (increment) {
+      incrementCounter();]
+    } else {
+      cout << "Error: isHalted" << endl;
+    };
   };
-};
 
-int LittleComputer::getMemoryAt(int location)
-{
-  return m_memory.at(location);
-}
-void LittleComputer::incrementCounter()
-{
-  m_programCounter += 1;
-}
-int LittleComputer::getCurrentInstruction()
-{
-  cout << getProgramCounter();
-  return m_memory.at(getProgramCounter());
-}
-void LittleComputer::step()
-{
-  LittleComputer();
-}
-bool LittleComputer::isHalted()
-{
-  if (m_memory.at(getProgramCounter()) == 0) {
-    return true;
-  } else {
-    return false;
+  int LittleComputer::getMemoryAt(int location)
+  {
+    return m_memory.at(location);
   }
-}
-void LittleComputer::restart()
-{
-  m_programCounter = 0;
-  m_accumulator = 0;
-}
+  void LittleComputer::incrementCounter()
+  {
+    m_programCounter += 1;
+  }
+  int LittleComputer::getCurrentInstruction()
+  {
+    cout << getProgramCounter();
+    return m_memory.at(getProgramCounter());
+  }
+  void LittleComputer::step()
+  {
+    LittleComputer();
+  }
+  bool LittleComputer::isHalted()
+  {
+    if (m_memory.at(getProgramCounter()) == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  void LittleComputer::restart()
+  {
+    m_programCounter = 0;
+    m_accumulator = 0;
+  }
 
-int LittleComputer::getProgramCounter()
-{
-  return m_programCounter;
-}
+  int LittleComputer::getProgramCounter()
+  {
+    return m_programCounter;
+  }
 
-int LittleComputer::getAccumulator()
-{
-  return m_accumulator;
-}
+  int LittleComputer::getAccumulator()
+  {
+    return m_accumulator;
+  }
 
-// Add other public member functions / constructors here
+  // Add other public member functions / constructors here
