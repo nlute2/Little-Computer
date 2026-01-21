@@ -75,6 +75,7 @@ bool LittleComputer::isHalted()
 }
 void LittleComputer::restart()
 {
+  m_programCounter = 0;
 }
 
 int LittleComputer::getProgramCounter()
