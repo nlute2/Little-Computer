@@ -20,7 +20,7 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
   if (!isHalted()) {
     switch (m_memory.at(getProgramCounter()) / 100) {
     case 0:
-      isHalted = true;
+      
       break;
     case 1:
       m_accumulator = getAccumulator() + getMemoryAt(instruction % 100);
