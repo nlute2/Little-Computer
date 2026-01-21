@@ -22,75 +22,75 @@ using namespace std;
 
 
 
-// TEST_CASE("default constructor - memory not tested")
-// {
-//     LittleComputer c1;
-//     CHECK(c1.getAccumulator() == 0);
-//     CHECK(c1.getProgramCounter() == 0);
-// }
-
-// TEST_CASE("constructor that takes program and getMemoryAt")
-// {
-//     // Program that adds 10 to itself and prints answer
-//     vector<int> program = {504, 104, 902, 0, 10};
-
-//     LittleComputer c1(program);
-
-//     // verify program was stored
-//     for (size_t i = 0; i < program.size(); i++)
-//         CHECK(c1.getMemoryAt(i) == program.at(i));
-// }
-
-// TEST_CASE("getCurrentInstruction start")
-// {
-//     // Program does not have to do anything meaningful for this test
-//     vector<int> program = {504, 104, 902, 0, 10};
-
-//     LittleComputer c1(program);
-//     CHECK(c1.getCurrentInstruction() == 504);
-// }
-
-// TEST_CASE("step advances to next instruction")
-// {
-//     // Program does not have to do anything meaningful for this test
-//     vector<int> program = {502, 102, 5};
-
-//     LittleComputer c1(program);
-//     c1.step();
-//     CHECK(c1.getProgramCounter() == 1);
-//     CHECK(c1.getCurrentInstruction() == 102);
-// }
-
-// TEST_CASE("isHalted and step does not advance halted program")
-// {
-//     // Program does not have to do anything meaningful for this test
-//     vector<int> program = {103, 103, 0, 5};
-
-//     LittleComputer c1(program);
-//     CHECK(c1.isHalted() == false);
-//     c1.step();
-//     CHECK(c1.isHalted() == false);
-//     c1.step();
-//     CHECK(c1.isHalted() == true);
-//     CHECK(c1.getProgramCounter() == 2);
-//     c1.step();
-//     CHECK(c1.isHalted() == true);
-//     CHECK(c1.getProgramCounter() == 2);
-// }
-
-TEST_CASE("step add and subtract work")
+TEST_CASE("default constructor - memory not tested")
 {
-    // Program that adds 5 twice then subtracts 7
-    vector<int> program = {104, 104, 205, 0, 5, 7};
+    LittleComputer c1;
+    CHECK(c1.getAccumulator() == 0);
+    CHECK(c1.getProgramCounter() == 0);
+}
+
+TEST_CASE("constructor that takes program and getMemoryAt")
+{
+    // Program that adds 10 to itself and prints answer
+    vector<int> program = {504, 104, 902, 0, 10};
+
+    LittleComputer c1(program);
+
+    // verify program was stored
+    for (size_t i = 0; i < program.size(); i++)
+        CHECK(c1.getMemoryAt(i) == program.at(i));
+}
+
+TEST_CASE("getCurrentInstruction start")
+{
+    // Program does not have to do anything meaningful for this test
+    vector<int> program = {504, 104, 902, 0, 10};
+
+    LittleComputer c1(program);
+    CHECK(c1.getCurrentInstruction() == 504);
+}
+
+TEST_CASE("step advances to next instruction")
+{
+    // Program does not have to do anything meaningful for this test
+    vector<int> program = {502, 102, 5};
 
     LittleComputer c1(program);
     c1.step();
-    CHECK(c1.getAccumulator() == 5);
-    c1.step();
-    CHECK(c1.getAccumulator() == 10);
-    c1.step();
-    CHECK(c1.getAccumulator() == 3);
+    CHECK(c1.getProgramCounter() == 1);
+    CHECK(c1.getCurrentInstruction() == 102);
 }
+
+TEST_CASE("isHalted and step does not advance halted program")
+{
+    // Program does not have to do anything meaningful for this test
+    vector<int> program = {103, 103, 0, 5};
+
+    LittleComputer c1(program);
+    CHECK(c1.isHalted() == false);
+    c1.step();
+    CHECK(c1.isHalted() == false);
+    c1.step();
+    CHECK(c1.isHalted() == true);
+    CHECK(c1.getProgramCounter() == 2);
+    c1.step();
+    CHECK(c1.isHalted() == true);
+    CHECK(c1.getProgramCounter() == 2);
+}
+
+// TEST_CASE("step add and subtract work")
+// {
+//     // Program that adds 5 twice then subtracts 7
+//     vector<int> program = {104, 104, 205, 0, 5, 7};
+
+//     LittleComputer c1(program);
+//     c1.step();
+//     CHECK(c1.getAccumulator() == 5);
+//     c1.step();
+//     CHECK(c1.getAccumulator() == 10);
+//     c1.step();
+//     CHECK(c1.getAccumulator() == 3);
+// }
 
 // TEST_CASE("step load and store work")
 // {

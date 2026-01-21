@@ -13,9 +13,9 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
 {
   m_accumulator = 0;
   m_programCounter = 0;
-  
-  m_memory = instructions;}
-  
+
+  m_memory = instructions;
+}
 
 int LittleComputer::getMemoryAt(int location)
 {
@@ -32,8 +32,6 @@ int LittleComputer::getCurrentInstruction()
 }
 void LittleComputer::step()
 {
-  if(!isHalted()){
-  incrementCounter();}
   cout << getProgramCounter();
   int instruction = m_memory.at(getProgramCounter());
   if (!isHalted()) {
@@ -43,23 +41,23 @@ void LittleComputer::step()
       break;
     case 1:
       m_accumulator = getAccumulator() + getMemoryAt(instruction % 100);
-      
+
       break;
     case 2:
       m_accumulator = getAccumulator() - getMemoryAt(instruction % 100);
-      
+
       break;
     case 3:
       m_memory.at(instruction % 100) = m_accumulator;
-     
+
       break;
     case 5:
       m_accumulator = getMemoryAt(instruction % 100);
-      
+
       break;
     case 6:
       m_programCounter = getMemoryAt(instruction % 100);
-      
+
       break;
     case 7:
       if (m_accumulator == 0) {
@@ -71,12 +69,13 @@ void LittleComputer::step()
       // case 9:
     }
 
-    
+    if (!isHalted()) {
+      incrementCounter();
+    }
   } else {
     cout << "Error: isHalted" << endl;
   };
 }
-
 
 bool LittleComputer::isHalted()
 {
