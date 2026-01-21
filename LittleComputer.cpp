@@ -57,7 +57,7 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
     cout << "Error: isHalted" << endl;
   };
 };
-
+}
 int LittleComputer::getMemoryAt(int location)
 {
   return m_memory.at(location);
