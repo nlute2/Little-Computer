@@ -24,7 +24,7 @@ using namespace std;
           case 2:
           m_accumulator -= m_memory.at(getProgramCounter());
           case 3:
-          m_memory.at(instruction/100)s
+          m_memory.at(instruction%100) = 
           case 4:
           
           case 5:
