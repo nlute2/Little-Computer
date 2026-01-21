@@ -75,9 +75,9 @@ void LittleComputer::step()
   } else {
     cout << "Error: isHalted" << endl;
   };
-};
-
 }
+
+
 bool LittleComputer::isHalted()
 {
   if (m_memory.at(getProgramCounter()) == 0) {
