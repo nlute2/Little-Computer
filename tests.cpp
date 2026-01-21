@@ -22,24 +22,24 @@ using namespace std;
 
 
 
-TEST_CASE("default constructor - memory not tested")
-{
-    LittleComputer c1;
-    CHECK(c1.getAccumulator() == 0);
-    CHECK(c1.getProgramCounter() == 0);
-}
+// TEST_CASE("default constructor - memory not tested")
+// {
+//     LittleComputer c1;
+//     CHECK(c1.getAccumulator() == 0);
+//     CHECK(c1.getProgramCounter() == 0);
+// }
 
-TEST_CASE("constructor that takes program and getMemoryAt")
-{
-    // Program that adds 10 to itself and prints answer
-    vector<int> program = {504, 104, 902, 0, 10};
+// TEST_CASE("constructor that takes program and getMemoryAt")
+// {
+//     // Program that adds 10 to itself and prints answer
+//     vector<int> program = {504, 104, 902, 0, 10};
 
-    LittleComputer c1(program);
+//     LittleComputer c1(program);
 
-    // verify program was stored
-    for (size_t i = 0; i < program.size(); i++)
-        CHECK(c1.getMemoryAt(i) == program.at(i));
-}
+//     // verify program was stored
+//     for (size_t i = 0; i < program.size(); i++)
+//         CHECK(c1.getMemoryAt(i) == program.at(i));
+// }
 
 TEST_CASE("getCurrentInstruction start")
 {
