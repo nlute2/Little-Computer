@@ -27,9 +27,9 @@ using namespace std;
           m_memory.at(instruction%100) = m_accumulator;
           
           case 5:
-          m_accumulator = 
+          m_accumulator = getMemoryAt(instruction % 100);
           case 6:
-
+          
           case 7:
 
           case 8: 
