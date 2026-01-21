@@ -31,9 +31,8 @@ using namespace std;
           m_programCounter = getMemoryAt(instruction % 100);
           case 7:
           if (m_accumulator == 0){
-            m_programCounter = getMemoryAt(instruction)
+            m_programCounter = getMemoryAt(instruction % 100);
           }
-
           case 8: 
           
           case 9:
