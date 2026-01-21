@@ -66,18 +66,10 @@ using namespace std;
     }
     void LittleComputer::restart(){}
 
-    /**
-     * @brief Get the Program Counter
-     * 
-     * @return int Current program counter
-     */
+  
     int LittleComputer::getProgramCounter(){return m_programCounter;}
 
-    /**
-     * @brief Get the Accumulator value
-     * 
-     * @return int Current accumulator value
-     */
+   
     int LittleComputer::getAccumulator(){
       return m_accumulator;
     }
