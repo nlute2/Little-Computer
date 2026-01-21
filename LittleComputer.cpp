@@ -11,15 +11,15 @@ using namespace std;
     LittleComputer::LittleComputer(const vector<int>& instructions){
      m_accumulator = 0;
       m_programCounter = 0;
-      instructions = 
+      m_memory = instructions; 
       if(!isHalted()){
-        switch(instructions.at(getProgramCounter())){
+        switch(m_memory.at(getProgramCounter())){
 
           case 000: 
           cout << "bingbong";
 
           case 100:
-
+            
           case 200:
 
           case 300:
