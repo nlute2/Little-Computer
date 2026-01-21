@@ -23,7 +23,7 @@ using namespace std;
           case 2:
           m_accumulator -= m_memory.at(getProgramCounter());
           case 3:
-          
+          m_memory.at
           case 4:
           
           case 5:
