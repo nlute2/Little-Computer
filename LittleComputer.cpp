@@ -76,7 +76,7 @@ void LittleComputer::restart()
 {
   m_programCounter = 0;
   m_accumulator = 0;
-  
+
 }
 
 int LittleComputer::getProgramCounter()
