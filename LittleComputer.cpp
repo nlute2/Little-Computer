@@ -14,6 +14,7 @@ using namespace std;
       m_memory = instructions; 
       if(!isHalted()){
         switch(m_memory.at(getProgramCounter())/100){
+          
 
           case 0: 
           cout << "bingbong";
@@ -23,7 +24,7 @@ using namespace std;
           case 2:
           m_accumulator -= m_memory.at(getProgramCounter());
           case 3:
-          m_memory.at
+          m_memory.at(m.)
           case 4:
           
           case 5:
