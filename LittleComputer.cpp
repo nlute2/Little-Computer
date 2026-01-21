@@ -19,7 +19,7 @@ using namespace std;
           cout << "bingbong";
 
           case 100:
-            
+          m_accumulator =   
           case 200:
 
           case 300:
