@@ -22,7 +22,7 @@ using namespace std;
           case 1:
           m_accumulator +=  getMemoryAt(instruction%100); 
           case 2:
-          m_accumulator -= m_memory.at(getProgramCounter());
+          m_accumulator -= getMemoryAt(instruction % 100);
           case 3:
           m_memory.at(instruction%100) = m_accumulator;
           
