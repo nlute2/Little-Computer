@@ -14,7 +14,7 @@ LittleComputer::LittleComputer(const vector<int>& instructions)
   m_accumulator = 0;
   m_programCounter = 0;
   m_memory = instructions;
-  for(instruction.size()){
+  for(m_memory.size()){
   int instruction = m_memory.at(getProgramCounter());
   if (!isHalted()) {
     switch (m_memory.at(getProgramCounter()) / 100) {
