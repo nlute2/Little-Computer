@@ -20,7 +20,7 @@ using namespace std;
           cout << "bingbong";
 
           case 1:
-          m_accumulator +=  getMemoryAt(); 
+          m_accumulator +=  getMemoryAt(instruction%100); 
           case 2:
           m_accumulator -= m_memory.at(getProgramCounter());
           case 3:
