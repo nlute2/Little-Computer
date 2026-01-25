@@ -37,6 +37,8 @@ public:
     int getCurrentInstruction();
     /**
      * @brief move the program forward
+     * execute the appropriate instruction.
+     * Cases 2-5 advance the counter, cases 6 and 7 do not.
      * 
      */
     void step();

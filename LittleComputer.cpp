@@ -4,11 +4,14 @@
 
 using namespace std;
 
+//initialize
 LittleComputer::LittleComputer()
 {
   m_accumulator = 0;
   m_programCounter = 0;
 };
+
+//intialize with instructions
 LittleComputer::LittleComputer(const vector<int>& instructions)
 {
   m_accumulator = 0;
@@ -30,6 +33,7 @@ int LittleComputer::getCurrentInstruction()
   cout << getProgramCounter();
   return m_memory.at(getProgramCounter());
 }
+
 void LittleComputer::step()
 {
   cout << getProgramCounter();
@@ -79,15 +83,15 @@ void LittleComputer::step()
     cout << "Error: isHalted" << endl;
   };
 }
-
+//program halts when an empty instruction or end of memory is reached.
 bool LittleComputer::isHalted()
 {
-  if (m_memory.at(getProgramCounter()) == 0) {
+  if (m_programCounter >= static_cast<int>(m_memory.size())) {
     return true;
-  } else {
-    return false;
+  } 
+    return m_memory[getProgramCounter()]==0;
   }
-}
+
 void LittleComputer::restart()
 {
   m_programCounter = 0;
